@@ -1,0 +1,44 @@
+<project name="gpcas" basedir=".">
+    <description>
+    gpcas
+    </description>
+    <property name="warnings" value="false"/>
+
+    <target name="-flex-init">
+        <property file="flex.properties"/>
+	<taskdef resource="flexTasks.tasks" classpath="${FLEX_HOME}/ant/lib/flexTasks.jar" />
+    </target>
+
+    <target name="clean">
+        <delete includeemptydirs="true">
+            <fileset dir="dist" includes="**/*"/>
+        </delete>
+    </target>
+
+    <target name="build" depends="-flex-init">
+    <compc 
+    output="dist/gpcas.swc"
+    warnings="false"
+    >
+	    <include-sources dir="src/pl/bmnet/gpcas/geometry" includes="*.as"/>
+	    <include-sources dir="src/pl/bmnet/gpcas/util" includes="*.as"/>
+            <load-config filename="${FLEX_HOME}/frameworks/flex-config.xml"/>
+            <source-path path-element="${FLEX_HOME}/frameworks"/>
+    </compc>
+    <mxmlc
+        	output="dist/gpcas_test.swf"
+			warnings="false"
+			file="test/GeomTest.mxml"
+			strict="false"
+        >
+        	<compiler.include-libraries dir="dist" append="true">
+        	                <include name="**.swc" />
+        	</compiler.include-libraries> 	
+	        <load-config filename="${FLEX_HOME}/frameworks/flex-config.xml"/>
+            <source-path path-element="${FLEX_HOME}/frameworks"/>
+    </mxmlc>
+
+    </target>
+
+    
+</project>
