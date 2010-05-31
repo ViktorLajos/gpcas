@@ -9,7 +9,6 @@
         </excludedEntries>
       </libraryPathEntry>
       <libraryPathEntry kind="1" linkType="1" path="libs"/>
-      <libraryPathEntry kind="3" linkType="1" path="/gpcas-lib/bin/gpcas-lib.swc" useDefaultLinkType="false"/>
     </libraryPath>
     <sourceAttachmentPath>
       <sourceAttachmentPathEntry kind="3" linkType="1" path="${PROJECT_FRAMEWORKS}/libs/datavisualization.swc" sourcepath="${PROJECT_FRAMEWORKS}/projects/datavisualization/src" useDefaultLinkType="false"/>
@@ -17,6 +16,8 @@
   </compiler>
   <applications>
     <application path="GPCASExample.mxml"/>
+    <application path="GeomTest.mxml"/>
+    <application path="BritainArrowsExample.mxml"/>
   </applications>
   <modules/>
   <buildCSSFiles/>

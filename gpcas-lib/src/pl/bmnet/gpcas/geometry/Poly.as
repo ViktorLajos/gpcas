@@ -150,6 +150,12 @@ public interface Poly
    function xor( p:Poly):Poly ;
    
    /**
+	* Return a Poly that is the exclusive-or of this polygon with the given polygon.
+	* The returned polygon could be complex. TODO
+	*/
+   function difference(p:Poly):Poly;
+   
+   /**
     * Return the area of the polygon in square units.
     */
    function getArea():Number ;

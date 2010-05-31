@@ -341,6 +341,16 @@ public class PolyDefault implements Poly
    }
    
    /**
+	* Return a Poly that is the difference of this polygon with the given polygon.
+	* The returned polygon could be complex.
+	*
+	* @return the returned Poly will be an instance of PolyDefault.
+	*/
+   public function difference(p:Poly):Poly{
+	   return Clip.difference(p,this,"PolyDefault");
+   }
+   
+   /**
     * Return the area of the polygon in square units.
     */
    public function getArea():Number {
