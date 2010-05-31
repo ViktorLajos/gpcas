@@ -12,7 +12,7 @@
 
     <target name="clean">
         <delete includeemptydirs="true">
-            <fileset dir="dist" includes="**/*"/>
+            <fileset dir="bin" includes="**/*"/>
         </delete>
     </target>
 
