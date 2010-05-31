@@ -375,6 +375,16 @@ public class PolySimple implements Poly
    public function xor(p:Poly):Poly {
       return Clip.xor( p, this, "PolySimple");
    }
+   
+   /**
+	* Return a Poly that is the difference of this polygon with the given polygon.
+	* The returned polygon could be complex.
+	*
+	* @return the returned Poly will be an instance of PolyDefault.
+	*/
+   public function difference(p:Poly):Poly{
+	  return Clip.difference(p,this,"PolySimple");
+   }
          
    /**
     * Returns the area of the polygon.
