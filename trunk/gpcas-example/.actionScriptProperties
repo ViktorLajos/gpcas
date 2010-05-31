@@ -15,9 +15,9 @@
     </sourceAttachmentPath>
   </compiler>
   <applications>
-    <application path="GPCASExample.mxml"/>
-    <application path="GeomTest.mxml"/>
+    <application path="TestSuite.mxml"/>
     <application path="BritainArrowsExample.mxml"/>
+    <application path="SimpleExample.mxml"/>
   </applications>
   <modules/>
   <buildCSSFiles/>
